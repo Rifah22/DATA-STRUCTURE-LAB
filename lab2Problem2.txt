@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int array1[]={10,20,30,40,50};
+    int array2[]={1,2,3,4,5,6,7,8};
+    int size1=sizeof(array1)/sizeof(int);
+    int size2=sizeof(array2)/sizeof(int);
+    int size3=size1+size2;
+    int mergeArray[size3];
+    for(int i=0;i<size1;i++)
+    {
+        mergeArray[i]=array1[i];
+    }
+    for(int i=0;i<size2;i++)
+    {
+        mergeArray[size1]=array2[i];
+        size1++;
+    }
+    for(int i=size3-1;i>=0;i--)
+    {
+        cout<< mergeArray[i]<<" ";
+    }
+
+    return 0;
+}
